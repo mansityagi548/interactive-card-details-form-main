@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive-card-details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="left-panel">
+            <div class="front-card">
+                <img src="assests/card-logo.svg" alt="">
+                <p class="card-number" aria-label="0000 0000 0000 0000">
+                    <span>0000 0000 0000 0000</span>
+                </p>
+                <div class="card-details">
+                    <span class="card-holder">JANE APPLESEED</span>
+                    <p class="card-expires">
+                        <span id="display-month">00</span>/<span id="display-year">00</span>
+                    </p>
+                </div>
+            </div>
+            <div class="back-card">
+                <p class="cvc-number" aria-label="000">
+                    <span id="cv-num">000</span>
+                </p>
+            </div>
+        </section>
+        <section class="right-panel">
+            <form aria-labelledby="form-title">
+                <h1 id="form-title" class="sr-only">Confirm Card Details</h1>
+                <div class="name">
+                    <label for="name">CARDHOLDER NAME</label>
+                    <input type="text" id="name" name="username" placeholder="e.g. Jane Appleseed" maxlength="19"
+                        aria-required="true" autocomplete="off">
+                    <p class="error-msg">Fill this field first</p>
+                </div>
+
+                <div class="number">
+                    <label for="number">CARD NUMBER</label>
+                    <input type="text" id="number" name="userCardNumber" placeholder="e.g. 1234 5678 9123 0000"
+                        maxlength="19" aria-required="true" autocomplete="off">
+                    <p id="number-error" class="error-msg" aria-live="polite">Wrong format, numbers only</p>
+                </div>
+                <div class="form-bottom-row">
+
+                    <fieldset class="expiry-group">
+                        <legend>EXP. DATE (MM/YY)</legend>
+                        <div class="input-flex">
+                            <input type="text" id="month" placeholder="MM" minlength="2">
+                            <input type="text" id="year" placeholder="YY" minlength="2">
+                        </div>
+                        <p class="error-msg">Can't be blank</p>
+                    </fieldset>
+
+                    <div class="cvc-group">
+                        <label for="cvc">CVC</label>
+                        <input type="text" id="cvc" placeholder="e.g. 123" minlength="3">
+                        <p class="error-msg">Can't be blank</p>
+                    </div>
+                </div>
+                <button type="submit" class="confirm-btn">Confirm</button>
+            </form>
+
+            <div class="completed-state" id="completed-state">
+                <img src="assests/icon-complete.svg" alt="Success Checkmark" class="success-icon-img">
+
+                <h2>THANK YOU!</h2>
+                <p>We've added your card details</p>
+                <button class="confirm-btn" id="continue">Continue</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
