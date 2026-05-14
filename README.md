@@ -24,9 +24,9 @@ A fully interactive credit card details form with **real-time card preview**, fo
 
 ## 🚀 Live Demo
 
-[**View Live Demo**]() 
+[**View Live Demo**](# https://mansityagi548.github.io/interactive-card-details-form-main/) 
 
-![Live Preview]() 
+![Live Preview](preview/interactive-card%20preview.png) 
 
 
 
